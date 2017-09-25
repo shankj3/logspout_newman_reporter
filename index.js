@@ -138,21 +138,7 @@ LogspoutReporter = function (emitter, options) {
     // I don't htink i actually care about console logs right now. - Jessi
     //
     // emitter.on('console', function (err, o) {
-    //     if (err) { return; }
-
-    //     var color = colors[o.level] || colors.gray,
-    //         message;
-
-    //     // we first merge all messages to a string. while merging we run the values to util.inspect to colour code the
-    //     // messages based on data type
-    //     message = wrap(_.reduce(o.messages, function (log, message) { // wrap the whole message to the window size
-    //         return (log += (log ? colors.white(', ') : '') + inspect(message));
-    //     }, E), `  ${color(symbols.console.middle)} `); // add an indentation line at the beginning
-
-    //     print.buffer(color(`  ${symbols.console.top}\n`), color(`  ${symbols.console.bottom}\n`))
-    //         // tweak the message to ensure that its surrounding is not brightly coloured.
-    //         // also ensure to remove any blank lines generated due to util.inspect
-    //         .nobuffer(colors.gray(message.replace(/\n\s*\n/g, LF) + LF));
+    //     do something?
     // });
 };
 
