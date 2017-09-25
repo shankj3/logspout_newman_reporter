@@ -1,7 +1,8 @@
 {
-  "name": "logspout_newman_reporter",
+  "name": "newman-reporter-logspout",
   "version": "0.1.0",
   "description": "Custom Reporter for Newman so logspout can pick it up and send to ElasticSearch",
+  "repository": "https://github.com/shankj3/logspout_newman_reporter.git",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
