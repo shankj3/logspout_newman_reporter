@@ -58,9 +58,9 @@ LogspoutReporter = function (emitter, options) {
         }
         // clear result object
         elasticResult = {};
-        // add in ELK identifiers & collection name since it's all the same for one run
-        elasticResult['@timestamp'] = moment().format('YYYY-MM-DD HH:mm:ss.SSSSSS');
-        elasticResult['@version'] = 1;
+        // // add in ELK identifiers & collection name since it's all the same for one run
+        // elasticResult['@timestamp'] = moment().format('YYYY-MM-DD HH:mm:ss.SSSSSS');
+        // elasticResult['@version'] = 1;
         elasticResult['collection'] = collectionIdentifier;
 
         // No need to even print out any json for ELK here, since nothing of value has happened, request hasn't

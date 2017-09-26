@@ -10,8 +10,6 @@ Each test as executed will print to stdout for consumption by logspout.
 
 | Key | Value  |  
 |:-|:-|
-|  `@timestamp` | ELK annotation for time series   |
-| `@version`  |  Elk annotation  | 
 | `collection`  |  name of Postman/ Newman Collection  |  
 | `test_name` | Name of Test Executed  |
 | `http.request.method` | Request verb |
@@ -31,8 +29,6 @@ Each test as executed will print to stdout for consumption by logspout.
 ### Ex: Passed Test JSON 
 ```json
     {
-      "@timestamp": "2017-09-25 23:48:53.604000",
-      "@version": 1,
       "collection": " Health v2.0",
       "test_name": "Product Host Health",
       "http.request.method": "GET",
@@ -50,8 +46,6 @@ Each test as executed will print to stdout for consumption by logspout.
 
 ```json 
     {
-      "@timestamp": "2017-09-25 23:52:55.391000",
-      "@version": 1,
       "collection": "Health v2.0",
       "test_name": "Proxy Health",
       "http.request.method": "GET",
