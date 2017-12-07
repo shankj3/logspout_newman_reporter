@@ -27,6 +27,8 @@ function isEmptyObject(obj) {
 
 LogspoutReporter = function (emitter, options) {
     var elasticResult = {};
+    elasticResult["assertion_errors"] = [];
+    elasticResult["assertion_errors_length"] = 0;
     var currentGroup = options.collection;
 
     // respect silent option to not report anything
@@ -129,6 +131,11 @@ LogspoutReporter = function (emitter, options) {
             // if skipped, we don't care with logstash.. or do we?? I'm not sure yet
             // @todo: figure out if skipped is necessary
             return;
+        }
+        // if it didn't pass, return the assertion error in the array 
+        if (!passed) {
+            elasticResult["assertion_errors"].push(o.assertion);
+            elasticResult["assertion_errors_length"]++;
         }
         elasticResult.test_passed = passed;
     });
