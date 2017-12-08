@@ -27,8 +27,6 @@ function isEmptyObject(obj) {
 
 LogspoutReporter = function (emitter, options) {
     var elasticResult = {};
-    elasticResult["assertion_errors"] = [];
-    elasticResult["assertion_errors_length"] = 0;
     var currentGroup = options.collection;
 
     // respect silent option to not report anything
@@ -60,6 +58,8 @@ LogspoutReporter = function (emitter, options) {
         }
         // clear result object
         elasticResult = {};
+        elasticResult["assertion_errors"] = [];
+        elasticResult["assertion_errors_length"] = 0;
         // // add in ELK identifiers & collection name since it's all the same for one run
         // elasticResult['@timestamp'] = moment().format('YYYY-MM-DD HH:mm:ss.SSSSSS');
         // elasticResult['@version'] = 1;

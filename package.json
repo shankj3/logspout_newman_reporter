@@ -1,6 +1,6 @@
 {
   "name": "newman-reporter-logspout",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Custom Reporter for Newman so logspout can pick it up and send to ElasticSearch",
   "repository": "https://github.com/shankj3/logspout_newman_reporter.git",
   "main": "index.js",
