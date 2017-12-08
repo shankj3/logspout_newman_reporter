@@ -60,6 +60,7 @@ LogspoutReporter = function (emitter, options) {
         elasticResult = {};
         elasticResult["assertion_errors"] = [];
         elasticResult["assertion_errors_length"] = 0;
+        elasticResult.test_passed = true;
         // // add in ELK identifiers & collection name since it's all the same for one run
         // elasticResult['@timestamp'] = moment().format('YYYY-MM-DD HH:mm:ss.SSSSSS');
         // elasticResult['@version'] = 1;
@@ -134,10 +135,10 @@ LogspoutReporter = function (emitter, options) {
         }
         // if it didn't pass, return the assertion error in the array 
         if (!passed) {
-            elasticResult["assertion_errors"].push(o.assertion);
+            elasticResult["assertion_errors"].push(o.error.message);
             elasticResult["assertion_errors_length"]++;
+            elasticResult.test_passed = false;
         }
-        elasticResult.test_passed = passed;
     });
 
     // show user console logs in a neatly formatted way (provided user has not disabled the same)
